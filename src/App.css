@@ -1,0 +1,44 @@
+* {
+  box-sizing: border-box;
+}
+#root {
+  width: 100%;
+  text-align: center;
+}
+.iconButton {
+  transition: all 0.2s !important;
+}
+.iconButton:hover {
+  background-color: #c5c5c5 !important ;
+  box-shadow: 0px 7px 7px rgba(0, 0, 0, 0.4);
+}
+.todoCard {
+  transition: 0.3s !important;
+}
+.todoCard:hover {
+  padding-bottom: 20px;
+  padding-top: 20px;
+  box-shadow: 0px 7px 7px rgba(0, 0, 0, 0.4);
+}
+/* ==========Custom Fonts =========*/
+@font-face {
+  font-family: 'Alexandria';
+  src: url('../public/Fonts/Alexandria-Regular.ttf') format('truetype');
+  font-weight: normal;
+}
+@font-face {
+  font-family: 'Alexandria';
+  src: url('../public/Fonts/Alexandria-Bold.ttf') format('truetype');
+  font-weight: bold;
+}
+@font-face {
+  font-family: 'Alexandria';
+  src: url('../public/Fonts/Alexandria-Black.ttf') format('truetype');
+  font-weight: 900;
+}
+@font-face {
+  font-family: 'Alexandria';
+  src: url('../public/Fonts/Alexandria-Light.ttf') format('truetype');
+  font-weight: 200;
+}
+/* ==========Custom Fonts =========*/
