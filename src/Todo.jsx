@@ -151,14 +151,16 @@ export default function Todo({ todo }) {
         className="todoCard"
         sx={{
           minWidth: 275,
-          background: '#283593',
-          color: 'white',
+          background: 'white',
+          borderRadius:"7px",
+         
+          color: 'black',
           marginTop: '10px',
         }}
       >
-        <CardContent>
-          <Grid container spacing={2}>
-            <Grid size={8}>
+        <CardContent >
+          <Grid container >
+            <Grid size={7.8}>
               <Typography
                 variant="h5"
                 sx={{

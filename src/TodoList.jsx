@@ -70,14 +70,15 @@ export default function TodoList() {
       <CssBaseline />
       <Container maxWidth="ml">
         <Card
-          sx={{ minWidth: 275 }}
+          sx={{ minWidth: 275, background: '#910773ff', }}
+          
           style={{
             maxHeight: '80vh',
             overflow: 'scroll',
           }}
         >
           <CardContent>
-            <Typography variant="h2" style={{ fontWeight: 'bold' }}>
+            <Typography variant="h2" style={{ fontWeight: 'bold' ,color:"white"}}>
               مهامي
             </Typography>
             <Divider />

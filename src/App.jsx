@@ -11,7 +11,7 @@ const theme = createTheme({
   },
   palette: {
     primary: {
-      main: '#dd2c00',
+      main: '#fcfbfbff',
     },
   },
 });
@@ -29,7 +29,7 @@ function App() {
               direction: 'rtl',
               display: 'flex',
               justifyContent: 'center',
-              backgroundColor: '#191b1f',
+              backgroundColor: '#ffffffff',
               alignItems: 'center',
               height: '100vh',
             }}
