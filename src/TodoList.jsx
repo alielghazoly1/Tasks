@@ -16,9 +16,10 @@ import { v4 as uuidv4 } from 'uuid';
 // hooks
 import { TodosContext } from './context/TodosContext';
 import { useState, useContext, useEffect } from 'react';
-
+import { ToastContext } from './context/ToastContext';
 export default function TodoList() {
   let { todos, setTodos } = useContext(TodosContext);
+  let { showHideToast } = useContext(ToastContext);
   let [titleInput, setTitleInput] = useState('');
   let [displayedTodosType, setDisplayedTodosType] = useState('all');
 
@@ -59,8 +60,9 @@ export default function TodoList() {
     };
     let updatedTodos = [...todos, newTodo];
     setTodos(updatedTodos);
-    setTitleInput('');
     localStorage.setItem('todos', JSON.stringify(updatedTodos));
+    setTitleInput('');
+    showHideToast('تم الاضافة بنجاح');
   }
 
   return (
@@ -86,7 +88,7 @@ export default function TodoList() {
               exclusive
               onChange={changeDisplayedType}
               aria-label="text alignment"
-              color='primary'
+              color="primary"
             >
               <ToggleButton value="non-completed">غير منجز</ToggleButton>
               <ToggleButton value="completed">منجز</ToggleButton>

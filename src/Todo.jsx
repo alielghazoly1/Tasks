@@ -4,6 +4,7 @@ import Typography from '@mui/material/Typography';
 import Grid from '@mui/material/Grid';
 import CheckIcon from '@mui/icons-material/Check';
 import DeleteOutlineOutlinedIcon from '@mui/icons-material/DeleteOutlineOutlined';
+import { ToastContext } from './context/ToastContext';
 import IconButton from '@mui/material/IconButton';
 import EditOutlinedIcon from '@mui/icons-material/EditOutlined';
 import { useContext, useState } from 'react';
@@ -25,6 +26,7 @@ export default function Todo({ todo }) {
     details: todo.details,
   });
   let { todos, setTodos } = useContext(TodosContext);
+  let { showHideToast } = useContext(ToastContext);
   // handel check click
   function handleCheckClick() {
     const updatedTodos = todos.map((t) =>
@@ -32,6 +34,7 @@ export default function Todo({ todo }) {
     );
     setTodos(updatedTodos);
     localStorage.setItem('todos', JSON.stringify(updatedTodos));
+    showHideToast('تم التعديل بنجاح');
   }
   // ===========handel check click
   // handel Delete Click
@@ -48,6 +51,7 @@ export default function Todo({ todo }) {
     });
     setTodos(updatedTodos);
     localStorage.setItem('todos', JSON.stringify(updatedTodos));
+    showHideToast('تم الحذف بنجاح');
   }
   // ==============handel Delete Click
   // handel update click
@@ -68,6 +72,7 @@ export default function Todo({ todo }) {
     setTodos(updatedTodos);
     haneleUpdateClose();
     localStorage.setItem('todos', JSON.stringify(updatedTodos));
+    showHideToast('تم التحديث بنجاح');
   }
   // ===============handel update click
   return (
@@ -176,6 +181,10 @@ export default function Todo({ todo }) {
             >
               {/* check */}
               <IconButton
+                sx={{
+                  width: { xs: 35, sm: 45 },
+                  height: { xs: 35, sm: 45 },
+                }}
                 onClick={handleCheckClick}
                 className="iconButton"
                 aria-label="check"
@@ -190,6 +199,10 @@ export default function Todo({ todo }) {
 
               {/* edit */}
               <IconButton
+                sx={{
+                  width: { xs: 35, sm: 45 },
+                  height: { xs: 35, sm: 45 },
+                }}
                 onClick={handelUpdeteClick}
                 className="iconButton"
                 aria-label="edit"
@@ -204,6 +217,10 @@ export default function Todo({ todo }) {
 
               {/* delete */}
               <IconButton
+                sx={{
+                  width: { xs: 35, sm: 45 },
+                  height: { xs: 35, sm: 45 },
+                }}
                 className="iconButton"
                 aria-label="delete"
                 style={{

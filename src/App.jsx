@@ -3,6 +3,8 @@ import './App.css';
 import TodoList from './TodoList';
 import { TodosContext } from './context/TodosContext';
 import { createTheme, ThemeProvider } from '@mui/material';
+import MySnackBar from './MySnackBar';
+import { ToastProvider } from './context/ToastContext';
 const theme = createTheme({
   typography: {
     fontFamily: ['Alexandria'],
@@ -16,23 +18,28 @@ const theme = createTheme({
 const initialTodos = [];
 function App() {
   let [todos, setTodos] = useState(initialTodos);
+
+
   return (
     <>
       <ThemeProvider theme={theme}>
-        <div
-          style={{
-            direction: 'rtl',
-            display: 'flex',
-            justifyContent: 'center',
-            backgroundColor: '#191b1f',
-            alignItems: 'center',
-            height: '100vh',
-          }}
-        >
-          <TodosContext.Provider value={{ todos, setTodos }}>
-            <TodoList />
-          </TodosContext.Provider>
-        </div>
+        <ToastProvider >
+          <div
+            style={{
+              direction: 'rtl',
+              display: 'flex',
+              justifyContent: 'center',
+              backgroundColor: '#191b1f',
+              alignItems: 'center',
+              height: '100vh',
+            }}
+          >
+           
+            <TodosContext.Provider value={{ todos, setTodos }}>
+              <TodoList />
+            </TodosContext.Provider>
+          </div>
+        </ToastProvider>
       </ThemeProvider>
     </>
   );
