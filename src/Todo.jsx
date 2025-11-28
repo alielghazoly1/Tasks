@@ -175,6 +175,7 @@ export default function Todo({ todo }) {
 
             <Grid
               size={4}
+              
               display="flex"
               justifyContent="space-around"
               alignItems="center"

@@ -68,16 +68,16 @@ export default function TodoList() {
   return (
     <>
       <CssBaseline />
-      <Container maxWidth="md">
+      <Container maxWidth="ml">
         <Card
           sx={{ minWidth: 275 }}
           style={{
             maxHeight: '80vh',
-            overflowY: 'scroll',
+            overflow: 'scroll',
           }}
         >
           <CardContent>
-            <Typography variant="h1" style={{ fontWeight: 'bold' }}>
+            <Typography variant="h2" style={{ fontWeight: 'bold' }}>
               مهامي
             </Typography>
             <Divider />
@@ -99,8 +99,9 @@ export default function TodoList() {
             {todosJsx}
             {/* =========All todos========= */}
             {/* Input + Add Button */}
-            <Grid container spacing={2} style={{ marginTop: '20px' }}>
+            <Grid container spacing={3} style={{ marginTop: '20px' }}>
               <Grid
+                
                 size={8}
                 display="flex"
                 justifyContent="space-around"
@@ -122,7 +123,6 @@ export default function TodoList() {
                 display="flex"
                 justifyContent="space-around"
                 alignItems="center"
-                style={{ background: 'green' }}
               >
                 <Button
                   onClick={() => {

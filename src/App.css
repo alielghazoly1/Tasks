@@ -42,3 +42,6 @@
   font-weight: 200;
 }
 /* ==========Custom Fonts =========*/
+.css-zjhuaj-MuiGrid-root {
+  --Grid-columnSpacing: 0px !important;
+}
