@@ -95,7 +95,7 @@ export default function Todo({ todo }) {
         </DialogContent>
         <DialogActions>
           <Button onClick={haneleDeleteDilogClose}>إغلاق</Button>
-          <Button autoFocus onClick={handelDeleteConfirm}>
+          <Button  autoFocus onClick={handelDeleteConfirm}>
             نعم قم بالحذف
           </Button>
         </DialogActions>
