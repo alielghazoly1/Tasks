@@ -229,9 +229,8 @@ export default function TodoList() {
             {todosJsx}
             {/* =========All todos========= */}
             {/* Input + Add Button */}
-            <Grid container spacing={3} style={{ marginTop: '20px' }}>
               <Grid container spacing={3} style={{ marginTop: '20px' }}>
-                <Grid item xs={8} display="flex" alignItems="center">
+                <Grid size={8} display="flex" alignItems="center">
                   <TextField
                     value={titleInput}
                     onChange={(e) => setTitleInput(e.target.value)}
@@ -240,7 +239,7 @@ export default function TodoList() {
                     variant="outlined"
                   />
                 </Grid>
-                <Grid item xs={4} display="flex" alignItems="center">
+                <Grid size={4} display="flex" alignItems="center">
                   <Button
                     onClick={handelAddClick}
                     variant="contained"
@@ -251,7 +250,7 @@ export default function TodoList() {
                   </Button>
                 </Grid>
               </Grid>
-            </Grid>
+            
             {/*==== Input + Add Button ====*/}
           </CardContent>
         </Card>
